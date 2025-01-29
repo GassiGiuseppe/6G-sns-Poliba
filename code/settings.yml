@@ -1,0 +1,2 @@
+# such path is relative to the starting folder: 6G-SNS-POLIBA
+log_file: 'omnet_logs/dump.txt'
