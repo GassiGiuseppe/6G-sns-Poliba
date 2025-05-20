@@ -42,6 +42,9 @@ class Daemon:
 
 
     def get_next_line(self):
+        """
+        This Method is blocking
+        """
         while True:
             with self._QUEUE_LOCK:
                 if len(self._QUEUE)> self._line_cursor:
@@ -50,3 +53,15 @@ class Daemon:
                 # debug phase
                 #if i == 28:
                 #    print(QUEUE)
+
+    def get_next_line_if_any(self):
+
+        with self._QUEUE_LOCK:
+
+            if len(self._QUEUE)> self._line_cursor:
+
+                self._line_cursor = self._line_cursor + 1
+                return self._QUEUE[self._line_cursor - 1].strip()
+
+        return None
+    

@@ -2,43 +2,37 @@ import subprocess
 import time
 from pathlib import Path
 import traci
+# from sumolib.miscutils import getFreeSocketPort
+import sumolib
+import os
+#import 
+import struct
 
-from daemon import Daemon
+from omnet_launcher import launch_ini_as_process
+from sumo_launcher import launch_sumo
 
-TEST = True
+def starter():
 
-def preparation():
+    launch_ini_as_process()
+    print("ini process launched")
+    launch_sumo()
+    print("sumo launched")
 
-    # daemon_path = Path('code/daemon.py')
-    # subprocess.Popen(["python", daemon_path])
+    step = 0
+    print('waiting for other')
 
 
-    if TEST:
-        # adversarial is used only in test phase
-        adversarial_path = Path('code/adversarial.py')
-        subprocess.Popen(["python", adversarial_path])
-
-    daemon = Daemon('log_file')
-    daemon.start()
-
+    while traci.simulation.getMinExpectedNumber == 0:
+        time.sleep(1)
     
-    for _ in range(30):
-        print(daemon.get_next_line())
-
-
-
-
-def omnet_starter():
-    sumoCmd = ["sumo-gui", "-c", "your_sumo_config_file.sumocfg"]
-    traci.start(sumoCmd)
-
     step = 0
     while step < 1000:  # Numero di step della simulazione
         traci.simulationStep()
         print(traci.vehicle.getIDList())
         if "veh0" in traci.vehicle.getIDList():  # Controlla se il veicolo esiste
             position = traci.vehicle.getPosition("veh0")
-            print(f"Step {step}: Posizione di veh0 -> {position}")
+            #print(f"Step {step}: Posizione di veh0 -> {position}")
+
         step += 1
 
     traci.close()
@@ -48,8 +42,11 @@ def omnet_starter():
 def main():
     print('hello')
     # preparation()
-    omnet_starter()
+    # sumo_thread = 
+    starter()
+    # right_starter()
+    #sumo_starter()    
 
     
-
+# execute this code in your terminal, not in the ide nor vscode
 main()
