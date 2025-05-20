@@ -1,0 +1,1 @@
+in this folder are stored all the sh script to create the enviroment to execute the drl, the os host is ubuntu
