@@ -75,6 +75,8 @@ sh "$SCRIPT_DIR/install-sumo.sh"
 
 # Installare Miniforge (obbligatorio)
 sh "$SCRIPT_DIR/install-miniforge.sh"
+# install vscode
+sh "$SCRIPT_DIR/vscode.sh"
 
 # Informare e riavviare il sistema
 echo "Setup completato. Il sistema si riavvierà tra 10 secondi..."
