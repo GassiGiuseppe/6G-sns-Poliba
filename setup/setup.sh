@@ -77,6 +77,8 @@ sh "$SCRIPT_DIR/install-sumo.sh"
 sh "$SCRIPT_DIR/install-miniforge.sh"
 # install vscode
 sh "$SCRIPT_DIR/vscode.sh"
+# install conda
+sh "$SCRIPT_DIR/sudo_miniconda_setup.sh"
 
 # Informare e riavviare il sistema
 echo "Setup completato. Il sistema si riavvierà tra 10 secondi..."
