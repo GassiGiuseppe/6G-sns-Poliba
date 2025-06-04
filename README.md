@@ -17,4 +17,4 @@ cd 6G-sns-Poliba/setup
 chmod +x setup.sh
 
 # Run the setup script
-./setup.sh
+sudo ./setup.sh
