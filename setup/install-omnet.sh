@@ -5,17 +5,17 @@ rm omnetpp-5.6-src-linux.tgz
 cd ./omnetpp-5.6 
 
 # 
-sudo -u $SUDO_USER bash -c "export PATH=/home/$SUDO_USER/omnetpp-5.6.2/bin:\$PATH"
+sudo -u $SUDO_USER bash -c "export PATH=/home/$SUDO_USER/omnetpp-5.6/bin:\$PATH"
 
 
 # give the user the correct right over the files
-chown -R $SUDO_USER:$SUDO_USER /home/$SUDO_USER/omnetpp-5.6.2
-chmod -R 775 /home/$SUDO_USER/omnetpp-5.6.2
+chown -R $SUDO_USER:$SUDO_USER /home/$SUDO_USER/omnetpp-5.6
+chmod -R 775 /home/$SUDO_USER/omnetpp-5.6
 
 # does the command to compile 
 sudo -u $SUDO_USER bash -c -i "
-. /home/$SUDO_USER/omnetpp-5.6.2/setenv && 
-cd /home/$SUDO_USER/omnetpp-5.6.2 && 
+. /home/$SUDO_USER/omnetpp-5.6/setenv && 
+cd /home/$SUDO_USER/omnetpp-5.6 && 
 ./configure && 
 make"
 
