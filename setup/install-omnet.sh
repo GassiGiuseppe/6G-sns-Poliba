@@ -1,6 +1,7 @@
 cd /home/$SUDO_USER/
 curl -L -O https://github.com/omnetpp/omnetpp/releases/download/omnetpp-5.6/omnetpp-5.6-src-linux.tgz
 tar -xvzf ./omnetpp-5.6-src-linux.tgz
+rm omnetpp-5.6-src-linux.tgz
 cd ./omnetpp-5.6 
 
 # 
