@@ -45,7 +45,7 @@ apt install -y \
     libzmq3-dev
 
 # Creare la directory di lavoro nella home dell'utente
-WORKSPACE="/home/$SUDO_USER/workspace"
+WORKSPACE="/home/$SUDO_USER"
 echo "$WORKSPACE/install-scripts"
 mkdir -p "$WORKSPACE/install-scripts"
 cd "$WORKSPACE"
