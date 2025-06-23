@@ -26,7 +26,7 @@ eval "$($USER_HOME/miniconda/bin/conda shell.bash hook)"
 sudo -u $USER_NAME bash -c "$USER_HOME/miniconda/bin/conda init"
 
 # 5. Crea un ambiente con Python 3.7
-sudo -u $USER_NAME bash -c "$USER_HOME/miniconda/bin/conda create -y -n py37 python=3.7"
+sudo -u $USER_NAME bash -c "$USER_HOME/miniconda/bin/conda create -y -n py310 python=3.10"
 
 # 6. Pulizia (rimuove l'installer)
 rm $INSTALLER

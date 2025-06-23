@@ -8,7 +8,7 @@ from multiprocessing import Process
 def launch_ini():
     time.sleep(5)
 
-    absolute_path = '/home/simu5g/simu5g-workspace/prova/simulations/omnetpp.ini'   # of the ini file
+    absolute_path = '/home/utente/Desktop/prova/prova/simulations/omnetpp.ini'   # of the ini file
 
     # <-- exemple of the command -->
     final_commmand = '../src/prova_dbg -m -u Qtenv -n .:../src:../../inet4.4/examples:../../inet4.4/showcases:../../inet4.4/src:../../inet4.4/tests/validation:../../inet4.4/tests/networks:../../inet4.4/tutorials:../../simu5G/emulation:../../simu5G/simulations:../../simu5G/src:../../veins_inet/src/veins_inet:../../veins_inet/examples/veins_inet:../../veins-veins-5.2/examples/veins:../../veins-veins-5.2/src/veins -x inet.common.selfdoc;inet.linklayer.configurator.gatescheduling.z3;inet.showcases.visualizer.osg;inet.transportlayer.tcp_lwip;inet.showcases.emulation;inet.applications.voipstream;inet.visualizer.osg;inet.examples.voipstream --image-path=../../inet4.4/images:../../simu5G/images:../../veins_inet/images:../../veins-veins-5.2/images -l ../../inet4.4/src/INET -l ../../simu5G/src/simu5g -l ../../veins_inet/src/veins_inet -l ../../veins-veins-5.2/src/veins omnetpp.i'
