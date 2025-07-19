@@ -32,4 +32,4 @@ sudo -u $USER_NAME bash -c "$USER_HOME/miniconda/bin/conda create -y -n py310 py
 rm $INSTALLER
 
 # 7. Messaggio finale
-echo "Per iniziare a usare l'ambiente, esegui: conda activate py37"
+echo "Per iniziare a usare l'ambiente, esegui: conda activate py310"

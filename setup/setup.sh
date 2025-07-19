@@ -26,8 +26,6 @@ sudo apt install -y \
 
 # Creare la directory di lavoro nella home dell'utente
 WORKSPACE="/home/$SUDO_USER"
-echo "$WORKSPACE/install-scripts"
-mkdir -p "$WORKSPACE/install-scripts"
 cd "$WORKSPACE"
 
 # Configurare le variabili d'ambiente
@@ -37,26 +35,27 @@ SUMO_HOME="$WORKSPACE/sumo-1.6.0"
 # Modificare .bashrc per la persistenza
 BASHRC_PATH="/home/$SUDO_USER/.bashrc"
 #sudo -u $SUDO_USER bash -c "echo 'export PATH=\$PATH:$WORKSPACE/omnetpp-5.6/bin' >> $BASHRC_PATH"
-sudo -u $SUDO_USER bash -c "echo 'export PATH=\$PATH:$WORKSPACE/sumo-1.6.0/bin' >> $BASHRC_PATH"
-sudo -u $SUDO_USER bash -c "echo 'export PATH=\$PATH:/root/miniforge3/condabin' >> $BASHRC_PATH"
-sudo -u $SUDO_USER bash -c "echo 'export SUMO_HOME=$WORKSPACE/sumo-1.6.0' >> $BASHRC_PATH"
+#sudo -u $SUDO_USER bash -c "echo 'export PATH=\$PATH:$WORKSPACE/sumo-1.6.0/bin' >> $BASHRC_PATH"
+#sudo -u $SUDO_USER bash -c "echo 'export PATH=\$PATH:/root/miniforge3/condabin' >> $BASHRC_PATH"
+#sudo -u $SUDO_USER bash -c "echo 'export SUMO_HOME=$WORKSPACE/sumo-1.6.0' >> $BASHRC_PATH"
 sudo -u $SUDO_USER bash -c "echo 'export GDK_BACKEND=x11' >> $BASHRC_PATH"
 
 # Applicare le modifiche immediatamente nella shell corrente dell'utente
 #sudo -u $SUDO_USER bash -c "export PATH=\$PATH:$WORKSPACE/omnetpp-5.6/bin"
-sudo -u $SUDO_USER bash -c "export PATH=\$PATH:$WORKSPACE/sumo-1.6.0/bin"
-sudo -u $SUDO_USER bash -c "export PATH=\$PATH:/root/miniforge3/condabin"
-sudo -u $SUDO_USER bash -c "export SUMO_HOME=$WORKSPACE/sumo-1.6.0"
+#sudo -u $SUDO_USER bash -c "export PATH=\$PATH:$WORKSPACE/sumo-1.6.0/bin"
+#sudo -u $SUDO_USER bash -c "export PATH=\$PATH:/root/miniforge3/condabin"
+#sudo -u $SUDO_USER bash -c "export SUMO_HOME=$WORKSPACE/sumo-1.6.0"
 sudo -u $SUDO_USER bash -c "export GDK_BACKEND=x11"
 
 # Installare SUMO
 sh "$SCRIPT_DIR/install-omnet.sh"
-sh "$SCRIPT_DIR/install-sumo.sh"
+#sh "$SCRIPT_DIR/install-sumo.sh"
+sudo -u "$SUDO_USER" bash "$SCRIPT_DIR/install-sumo.sh"
 
 
 
-# Installare Miniforge (obbligatorio)
-sh "$SCRIPT_DIR/install-miniforge.sh"
+# Installare Miniforge (alternativa a conda)
+# sh "$SCRIPT_DIR/install-miniforge.sh"
 # install vscode
 sh "$SCRIPT_DIR/vscode.sh"
 # install conda
