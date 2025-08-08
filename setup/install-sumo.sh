@@ -1,16 +1,35 @@
-#USER_HOME="/home/${SUDO_USER:-$USER}" #rindondante con workspace
+#!/bin/bash
+# Install SUMO 1.6.0 from source and set up environment variables
+
+set -euo pipefail
+
+# Define user and workspace
+USER="${SUDO_USER:-$USER}"
 SUMO_VERSION="1.6.0"
-WORKSPACE="/home/$SUDO_USER"
+WORKSPACE="/home/$USER"
+
+echo "SUMO $SUMO_VERSION is installing"
+
+# Change to user workspace
 cd "$WORKSPACE"
-#cd /home/$SUDO_USER
-curl -L -O https://sumo.dlr.de/releases/1.6.0/sumo-src-1.6.0.tar.gz
-tar -xzvf sumo-src-1.6.0.tar.gz 
-rm sumo-src-1.6.0.tar.gz 
-cd ./sumo-1.6.0
-mkdir build/cmake-build && cd build/cmake-build
+
+# Download and extract SUMO source
+curl -L -O "https://sumo.dlr.de/releases/${SUMO_VERSION}/sumo-src-${SUMO_VERSION}.tar.gz"
+tar -xzvf "sumo-src-${SUMO_VERSION}.tar.gz"
+rm "sumo-src-${SUMO_VERSION}.tar.gz"
+
+# Build SUMO
+cd "sumo-${SUMO_VERSION}"
+mkdir -p build/cmake-build
+cd build/cmake-build
 cmake ../..
-make -j$(nproc)
-# update bashrc for sumo
-echo "export PATH=\$PATH:$USER_HOME/sumo-$SUMO_VERSION/bin" >> "$WORKSPACE/.bashrc"
-echo "export SUMO_HOME=$USER_HOME/sumo-$SUMO_VERSION" >> "$WORKSPACE/.bashrc"
+make -j"$(nproc)"
+
+# Add SUMO to PATH and set SUMO_HOME in .bashrc
+{
+  echo "export PATH=\$PATH:$WORKSPACE/sumo-${SUMO_VERSION}/bin"
+  echo "export SUMO_HOME=$WORKSPACE/sumo-${SUMO_VERSION}"
+} >> "$WORKSPACE/.bashrc"
+
+echo "SUMO $SUMO_VERSION installed and environment variables set."
 exit 0

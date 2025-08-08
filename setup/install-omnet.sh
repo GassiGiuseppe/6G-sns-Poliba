@@ -1,26 +1,36 @@
-cd /home/$SUDO_USER/
-curl -L -O https://github.com/omnetpp/omnetpp/releases/download/omnetpp-5.6/omnetpp-5.6-src-linux.tgz
-tar -xvzf ./omnetpp-5.6-src-linux.tgz
-rm omnetpp-5.6-src-linux.tgz
-cd ./omnetpp-5.6 
+#!/bin/bash
 
-# 
-sudo -u $SUDO_USER bash -c "export PATH=/home/$SUDO_USER/omnetpp-5.6/bin:\$PATH"
+# Determina l'utente vero
+USER="${SUDO_USER:-$USER}"
+WORKSPACE=$(eval echo "~$USER")
+OMNET_VERSION="5.6"
+OMNET_DIR="$WORKSPACE/omnetpp-$OMNET_VERSION"
+TARBALL="omnetpp-$OMNET_VERSION-src-linux.tgz"
+URL="https://github.com/omnetpp/omnetpp/releases/download/omnetpp-$OMNET_VERSION/$TARBALL"
 
+# Scarica ed estrai OMNeT++
+cd "$WORKSPACE" || exit 1
+curl -L -O "$URL"
+tar -xvzf "$TARBALL"
+rm "$TARBALL"
 
-# give the user the correct right over the files
-chown -R $SUDO_USER:$SUDO_USER /home/$SUDO_USER/omnetpp-5.6
-chmod -R 775 /home/$SUDO_USER/omnetpp-5.6
+# Modifica il .bashrc PRIMA della compilazione
+BASHRC="$WORKSPACE/.bashrc"
+LINE="export PATH=\$PATH:$OMNET_DIR/bin"
 
-# does the command to compile 
-sudo -u $SUDO_USER bash -c -i "
-. /home/$SUDO_USER/omnetpp-5.6/setenv && 
-cd /home/$SUDO_USER/omnetpp-5.6 && 
-./configure && 
-make"
+# Evita duplicazioni
+grep -qxF "$LINE" "$BASHRC" || echo "$LINE" >> "$BASHRC"
 
-# sudo -u $SUDO_USER . setenv
-# sudo -u $SUDO_USER ./configure
-# sudo -u $SUDO_USER make
+# Dai i permessi all’utente normale
+chown -R "$USER:$USER" "$OMNET_DIR"
+chmod -R 775 "$OMNET_DIR"
+
+# Compila come utente non-root con shell interattiva per caricare .bashrc
+sudo -u "$USER" bash -i <<EOF
+cd "$OMNET_DIR"
+. ./setenv
+./configure
+make
+EOF
 
 exit 0

@@ -21,6 +21,9 @@ curl -o $INSTALLER $MINICONDA_URL
 # 3. Installa Miniconda
 bash $INSTALLER -b -p $USER_HOME/miniconda
 
+# fix permission
+chown -R $USER_NAME:$USER_NAME $USER_HOME/miniconda
+
 # 4. Inizializza Miniconda
 eval "$($USER_HOME/miniconda/bin/conda shell.bash hook)"
 sudo -u $USER_NAME bash -c "$USER_HOME/miniconda/bin/conda init"
