@@ -1,0 +1,249 @@
++R #0  0s  Highway.server  192.168.0.1  127.0.0.0/8  <unspec>  lo0
++R #0  0s  Highway.server  192.168.0.1  192.168.0.0/24  <unspec>  ppp0
++R #0  0s  Highway.router  192.168.1.1  127.0.0.0/8  <unspec>  lo0
++R #0  0s  Highway.router  192.168.1.1  192.168.0.0/24  <unspec>  ppp0
++R #0  0s  Highway.router  192.168.1.1  192.168.1.0/24  <unspec>  ppp1
++R #0  0s  Highway.upf  192.168.3.1  127.0.0.0/8  <unspec>  lo0
++R #0  0s  Highway.upf  192.168.3.1  192.168.2.0/24  <unspec>  ppp0
++R #0  0s  Highway.upf  192.168.3.1  192.168.3.0/24  <unspec>  ppp1
++R #0  0s  Highway.upf  192.168.3.1  192.168.1.0/24  <unspec>  pppIf
++R #0  0s  Highway.gNodeB1  192.168.5.1  10.0.0.0/8  <unspec>  cellular
++R #0  0s  Highway.gNodeB1  192.168.5.1  192.168.2.0/24  <unspec>  pppIf
++R #0  0s  Highway.gNodeB1  192.168.5.1  192.168.4.0/24  <unspec>  x2ppp0
++R #0  0s  Highway.gNodeB1  192.168.5.1  192.168.5.0/24  <unspec>  pppMEHostIf
++R #0  0s  Highway.gNodeB2  192.168.6.1  10.0.0.0/8  <unspec>  cellular
++R #0  0s  Highway.gNodeB2  192.168.6.1  192.168.3.0/24  <unspec>  pppIf
++R #0  0s  Highway.gNodeB2  192.168.6.1  192.168.4.0/24  <unspec>  x2ppp0
++R #0  0s  Highway.gNodeB2  192.168.6.1  192.168.6.0/24  <unspec>  pppMEHostIf
+*I  #481  0.1s  Highway.car[0]  lo0 <unspec>
+*I  #481  0.1s  Highway.car[0]  cellularNic <unspec>
++I  #481  0.1s  Highway.car[0]  lo0 <unspec>
+*I  #481  0.1s  Highway.car[0]  lo0 <unspec>
+*I  #481  0.1s  Highway.car[0]  lo0 <unspec>
+*I  #481  0.1s  Highway.car[0]  cellularNic <unspec>
+*I  #481  0.1s  Highway.car[0]  cellularNic <unspec>
+*I  #481  0.1s  Highway.car[0]  cellularNic <unspec>
+*I  #481  0.1s  Highway.car[0]  cellularNic <unspec>
++I  #481  0.1s  Highway.car[0]  cellularNic <unspec>
+*I  #481  0.1s  Highway.car[0]  cellular <unspec>
+*I  #481  0.1s  Highway.car[0]  cellular <unspec>
+*I  #481  0.1s  Highway.car[0]  cellular <unspec>
+*I  #481  0.1s  Highway.car[0]  cellular <unspec>
+*I  #481  0.1s  Highway.car[0]  cellular <unspec>
+*I  #481  0.1s  Highway.car[0]  lo0 <unspec>
+*I  #481  0.1s  Highway.car[0]  cellular <unspec>
+*I  #481  0.1s  Highway.car[0]  cellular 10.0.1.89
+*I  #481  0.1s  Highway.car[0]  cellular 10.0.1.89
+*I  #481  0.1s  Highway.car[0]  cellular 10.0.1.89
+*I  #481  0.1s  Highway.car[0]  cellular 10.0.1.89
+*I  #481  0.1s  Highway.car[0]  cellular 10.0.1.89
+*I  #481  0.1s  Highway.car[0]  lo0 127.0.0.1
+*I  #481  0.1s  Highway.car[0]  lo0 127.0.0.1
+*I  #481  0.1s  Highway.car[0]  lo0 127.0.0.1
++R #481  0.1s  Highway.car[0]  10.0.1.89  <unspec>/0  <unspec>  cellular
+*I  #481  0.1s  Highway.car[0]  cellular 10.0.1.89
++R #481  0.1s  Highway.car[0]  10.0.1.89  127.0.0.0/8  <unspec>  lo0
++R #481  0.1s  Highway.car[0]  10.0.1.89  10.0.0.0/8  <unspec>  cellular
+*I  #37252  5.6s  Highway.car[1]  lo0 <unspec>
+*I  #37252  5.6s  Highway.car[1]  cellularNic <unspec>
++I  #37252  5.6s  Highway.car[1]  lo0 <unspec>
+*I  #37252  5.6s  Highway.car[1]  lo0 <unspec>
+*I  #37252  5.6s  Highway.car[1]  lo0 <unspec>
+*I  #37252  5.6s  Highway.car[1]  cellularNic <unspec>
+*I  #37252  5.6s  Highway.car[1]  cellularNic <unspec>
+*I  #37252  5.6s  Highway.car[1]  cellularNic <unspec>
+*I  #37252  5.6s  Highway.car[1]  cellularNic <unspec>
++I  #37252  5.6s  Highway.car[1]  cellularNic <unspec>
+*I  #37252  5.6s  Highway.car[1]  cellular <unspec>
+*I  #37252  5.6s  Highway.car[1]  cellular <unspec>
+*I  #37252  5.6s  Highway.car[1]  cellular <unspec>
+*I  #37252  5.6s  Highway.car[1]  cellular <unspec>
+*I  #37252  5.6s  Highway.car[1]  cellular <unspec>
+*I  #37252  5.6s  Highway.car[1]  lo0 <unspec>
+*I  #37252  5.6s  Highway.car[1]  cellular <unspec>
+*I  #37252  5.6s  Highway.car[1]  cellular 10.0.1.140
+*I  #37252  5.6s  Highway.car[1]  cellular 10.0.1.140
+*I  #37252  5.6s  Highway.car[1]  cellular 10.0.1.140
+*I  #37252  5.6s  Highway.car[1]  cellular 10.0.1.140
+*I  #37252  5.6s  Highway.car[1]  cellular 10.0.1.140
+*I  #37252  5.6s  Highway.car[1]  lo0 127.0.0.1
+*I  #37252  5.6s  Highway.car[1]  lo0 127.0.0.1
+*I  #37252  5.6s  Highway.car[1]  lo0 127.0.0.1
++R #37252  5.6s  Highway.car[1]  10.0.1.140  <unspec>/0  <unspec>  cellular
+*I  #37252  5.6s  Highway.car[1]  cellular 10.0.1.140
++R #37252  5.6s  Highway.car[1]  10.0.1.140  127.0.0.0/8  <unspec>  lo0
++R #37252  5.6s  Highway.car[1]  10.0.1.140  10.0.0.0/8  <unspec>  cellular
+*I  #85906  10.8s  Highway.car[2]  lo0 <unspec>
+*I  #85906  10.8s  Highway.car[2]  cellularNic <unspec>
++I  #85906  10.8s  Highway.car[2]  lo0 <unspec>
+*I  #85906  10.8s  Highway.car[2]  lo0 <unspec>
+*I  #85906  10.8s  Highway.car[2]  lo0 <unspec>
+*I  #85906  10.8s  Highway.car[2]  cellularNic <unspec>
+*I  #85906  10.8s  Highway.car[2]  cellularNic <unspec>
+*I  #85906  10.8s  Highway.car[2]  cellularNic <unspec>
+*I  #85906  10.8s  Highway.car[2]  cellularNic <unspec>
++I  #85906  10.8s  Highway.car[2]  cellularNic <unspec>
+*I  #85906  10.8s  Highway.car[2]  cellular <unspec>
+*I  #85906  10.8s  Highway.car[2]  cellular <unspec>
+*I  #85906  10.8s  Highway.car[2]  cellular <unspec>
+*I  #85906  10.8s  Highway.car[2]  cellular <unspec>
+*I  #85906  10.8s  Highway.car[2]  cellular <unspec>
+*I  #85906  10.8s  Highway.car[2]  lo0 <unspec>
+*I  #85906  10.8s  Highway.car[2]  cellular <unspec>
+*I  #85906  10.8s  Highway.car[2]  cellular 10.0.1.191
+*I  #85906  10.8s  Highway.car[2]  cellular 10.0.1.191
+*I  #85906  10.8s  Highway.car[2]  cellular 10.0.1.191
+*I  #85906  10.8s  Highway.car[2]  cellular 10.0.1.191
+*I  #85906  10.8s  Highway.car[2]  cellular 10.0.1.191
+*I  #85906  10.8s  Highway.car[2]  lo0 127.0.0.1
+*I  #85906  10.8s  Highway.car[2]  lo0 127.0.0.1
+*I  #85906  10.8s  Highway.car[2]  lo0 127.0.0.1
++R #85906  10.8s  Highway.car[2]  10.0.1.191  <unspec>/0  <unspec>  cellular
+*I  #85906  10.8s  Highway.car[2]  cellular 10.0.1.191
++R #85906  10.8s  Highway.car[2]  10.0.1.191  127.0.0.0/8  <unspec>  lo0
++R #85906  10.8s  Highway.car[2]  10.0.1.191  10.0.0.0/8  <unspec>  cellular
+*I  #150866  16.2s  Highway.car[3]  lo0 <unspec>
+*I  #150866  16.2s  Highway.car[3]  cellularNic <unspec>
++I  #150866  16.2s  Highway.car[3]  lo0 <unspec>
+*I  #150866  16.2s  Highway.car[3]  lo0 <unspec>
+*I  #150866  16.2s  Highway.car[3]  lo0 <unspec>
+*I  #150866  16.2s  Highway.car[3]  cellularNic <unspec>
+*I  #150866  16.2s  Highway.car[3]  cellularNic <unspec>
+*I  #150866  16.2s  Highway.car[3]  cellularNic <unspec>
+*I  #150866  16.2s  Highway.car[3]  cellularNic <unspec>
++I  #150866  16.2s  Highway.car[3]  cellularNic <unspec>
+*I  #150866  16.2s  Highway.car[3]  cellular <unspec>
+*I  #150866  16.2s  Highway.car[3]  cellular <unspec>
+*I  #150866  16.2s  Highway.car[3]  cellular <unspec>
+*I  #150866  16.2s  Highway.car[3]  cellular <unspec>
+*I  #150866  16.2s  Highway.car[3]  cellular <unspec>
+*I  #150866  16.2s  Highway.car[3]  lo0 <unspec>
+*I  #150866  16.2s  Highway.car[3]  cellular <unspec>
+*I  #150866  16.2s  Highway.car[3]  cellular 10.0.1.242
+*I  #150866  16.2s  Highway.car[3]  cellular 10.0.1.242
+*I  #150866  16.2s  Highway.car[3]  cellular 10.0.1.242
+*I  #150866  16.2s  Highway.car[3]  cellular 10.0.1.242
+*I  #150866  16.2s  Highway.car[3]  cellular 10.0.1.242
+*I  #150866  16.2s  Highway.car[3]  lo0 127.0.0.1
+*I  #150866  16.2s  Highway.car[3]  lo0 127.0.0.1
+*I  #150866  16.2s  Highway.car[3]  lo0 127.0.0.1
++R #150866  16.2s  Highway.car[3]  10.0.1.242  <unspec>/0  <unspec>  cellular
+*I  #150866  16.2s  Highway.car[3]  cellular 10.0.1.242
++R #150866  16.2s  Highway.car[3]  10.0.1.242  127.0.0.0/8  <unspec>  lo0
++R #150866  16.2s  Highway.car[3]  10.0.1.242  10.0.0.0/8  <unspec>  cellular
+*I  #208191  20.1s  Highway.car[4]  lo0 <unspec>
+*I  #208191  20.1s  Highway.car[4]  cellularNic <unspec>
++I  #208191  20.1s  Highway.car[4]  lo0 <unspec>
+*I  #208191  20.1s  Highway.car[4]  lo0 <unspec>
+*I  #208191  20.1s  Highway.car[4]  lo0 <unspec>
+*I  #208191  20.1s  Highway.car[4]  cellularNic <unspec>
+*I  #208191  20.1s  Highway.car[4]  cellularNic <unspec>
+*I  #208191  20.1s  Highway.car[4]  cellularNic <unspec>
+*I  #208191  20.1s  Highway.car[4]  cellularNic <unspec>
++I  #208191  20.1s  Highway.car[4]  cellularNic <unspec>
+*I  #208191  20.1s  Highway.car[4]  cellular <unspec>
+*I  #208191  20.1s  Highway.car[4]  cellular <unspec>
+*I  #208191  20.1s  Highway.car[4]  cellular <unspec>
+*I  #208191  20.1s  Highway.car[4]  cellular <unspec>
+*I  #208191  20.1s  Highway.car[4]  cellular <unspec>
+*I  #208191  20.1s  Highway.car[4]  lo0 <unspec>
+*I  #208191  20.1s  Highway.car[4]  cellular <unspec>
+*I  #208191  20.1s  Highway.car[4]  cellular 10.0.2.37
+*I  #208191  20.1s  Highway.car[4]  cellular 10.0.2.37
+*I  #208191  20.1s  Highway.car[4]  cellular 10.0.2.37
+*I  #208191  20.1s  Highway.car[4]  cellular 10.0.2.37
+*I  #208191  20.1s  Highway.car[4]  cellular 10.0.2.37
+*I  #208191  20.1s  Highway.car[4]  lo0 127.0.0.1
+*I  #208191  20.1s  Highway.car[4]  lo0 127.0.0.1
+*I  #208191  20.1s  Highway.car[4]  lo0 127.0.0.1
++R #208191  20.1s  Highway.car[4]  10.0.2.37  <unspec>/0  <unspec>  cellular
+*I  #208191  20.1s  Highway.car[4]  cellular 10.0.2.37
++R #208191  20.1s  Highway.car[4]  10.0.2.37  127.0.0.0/8  <unspec>  lo0
++R #208191  20.1s  Highway.car[4]  10.0.2.37  10.0.0.0/8  <unspec>  cellular
+*I  #301973  25.5s  Highway.car[5]  lo0 <unspec>
+*I  #301973  25.5s  Highway.car[5]  cellularNic <unspec>
++I  #301973  25.5s  Highway.car[5]  lo0 <unspec>
+*I  #301973  25.5s  Highway.car[5]  lo0 <unspec>
+*I  #301973  25.5s  Highway.car[5]  lo0 <unspec>
+*I  #301973  25.5s  Highway.car[5]  cellularNic <unspec>
+*I  #301973  25.5s  Highway.car[5]  cellularNic <unspec>
+*I  #301973  25.5s  Highway.car[5]  cellularNic <unspec>
+*I  #301973  25.5s  Highway.car[5]  cellularNic <unspec>
++I  #301973  25.5s  Highway.car[5]  cellularNic <unspec>
+*I  #301973  25.5s  Highway.car[5]  cellular <unspec>
+*I  #301973  25.5s  Highway.car[5]  cellular <unspec>
+*I  #301973  25.5s  Highway.car[5]  cellular <unspec>
+*I  #301973  25.5s  Highway.car[5]  cellular <unspec>
+*I  #301973  25.5s  Highway.car[5]  cellular <unspec>
+*I  #301973  25.5s  Highway.car[5]  lo0 <unspec>
+*I  #301973  25.5s  Highway.car[5]  cellular <unspec>
+*I  #301973  25.5s  Highway.car[5]  cellular 10.0.2.88
+*I  #301973  25.5s  Highway.car[5]  cellular 10.0.2.88
+*I  #301973  25.5s  Highway.car[5]  cellular 10.0.2.88
+*I  #301973  25.5s  Highway.car[5]  cellular 10.0.2.88
+*I  #301973  25.5s  Highway.car[5]  cellular 10.0.2.88
+*I  #301973  25.5s  Highway.car[5]  lo0 127.0.0.1
+*I  #301973  25.5s  Highway.car[5]  lo0 127.0.0.1
+*I  #301973  25.5s  Highway.car[5]  lo0 127.0.0.1
++R #301973  25.5s  Highway.car[5]  10.0.2.88  <unspec>/0  <unspec>  cellular
+*I  #301973  25.5s  Highway.car[5]  cellular 10.0.2.88
++R #301973  25.5s  Highway.car[5]  10.0.2.88  127.0.0.0/8  <unspec>  lo0
++R #301973  25.5s  Highway.car[5]  10.0.2.88  10.0.0.0/8  <unspec>  cellular
+*I  #402173  30.5s  Highway.car[6]  lo0 <unspec>
+*I  #402173  30.5s  Highway.car[6]  cellularNic <unspec>
++I  #402173  30.5s  Highway.car[6]  lo0 <unspec>
+*I  #402173  30.5s  Highway.car[6]  lo0 <unspec>
+*I  #402173  30.5s  Highway.car[6]  lo0 <unspec>
+*I  #402173  30.5s  Highway.car[6]  cellularNic <unspec>
+*I  #402173  30.5s  Highway.car[6]  cellularNic <unspec>
+*I  #402173  30.5s  Highway.car[6]  cellularNic <unspec>
+*I  #402173  30.5s  Highway.car[6]  cellularNic <unspec>
++I  #402173  30.5s  Highway.car[6]  cellularNic <unspec>
+*I  #402173  30.5s  Highway.car[6]  cellular <unspec>
+*I  #402173  30.5s  Highway.car[6]  cellular <unspec>
+*I  #402173  30.5s  Highway.car[6]  cellular <unspec>
+*I  #402173  30.5s  Highway.car[6]  cellular <unspec>
+*I  #402173  30.5s  Highway.car[6]  cellular <unspec>
+*I  #402173  30.5s  Highway.car[6]  lo0 <unspec>
+*I  #402173  30.5s  Highway.car[6]  cellular <unspec>
+*I  #402173  30.5s  Highway.car[6]  cellular 10.0.2.139
+*I  #402173  30.5s  Highway.car[6]  cellular 10.0.2.139
+*I  #402173  30.5s  Highway.car[6]  cellular 10.0.2.139
+*I  #402173  30.5s  Highway.car[6]  cellular 10.0.2.139
+*I  #402173  30.5s  Highway.car[6]  cellular 10.0.2.139
+*I  #402173  30.5s  Highway.car[6]  lo0 127.0.0.1
+*I  #402173  30.5s  Highway.car[6]  lo0 127.0.0.1
+*I  #402173  30.5s  Highway.car[6]  lo0 127.0.0.1
++R #402173  30.5s  Highway.car[6]  10.0.2.139  <unspec>/0  <unspec>  cellular
+*I  #402173  30.5s  Highway.car[6]  cellular 10.0.2.139
++R #402173  30.5s  Highway.car[6]  10.0.2.139  127.0.0.0/8  <unspec>  lo0
++R #402173  30.5s  Highway.car[6]  10.0.2.139  10.0.0.0/8  <unspec>  cellular
+*I  #517992  35.6s  Highway.car[7]  lo0 <unspec>
+*I  #517992  35.6s  Highway.car[7]  cellularNic <unspec>
++I  #517992  35.6s  Highway.car[7]  lo0 <unspec>
+*I  #517992  35.6s  Highway.car[7]  lo0 <unspec>
+*I  #517992  35.6s  Highway.car[7]  lo0 <unspec>
+*I  #517992  35.6s  Highway.car[7]  cellularNic <unspec>
+*I  #517992  35.6s  Highway.car[7]  cellularNic <unspec>
+*I  #517992  35.6s  Highway.car[7]  cellularNic <unspec>
+*I  #517992  35.6s  Highway.car[7]  cellularNic <unspec>
++I  #517992  35.6s  Highway.car[7]  cellularNic <unspec>
+*I  #517992  35.6s  Highway.car[7]  cellular <unspec>
+*I  #517992  35.6s  Highway.car[7]  cellular <unspec>
+*I  #517992  35.6s  Highway.car[7]  cellular <unspec>
+*I  #517992  35.6s  Highway.car[7]  cellular <unspec>
+*I  #517992  35.6s  Highway.car[7]  cellular <unspec>
+*I  #517992  35.6s  Highway.car[7]  lo0 <unspec>
+*I  #517992  35.6s  Highway.car[7]  cellular <unspec>
+*I  #517992  35.6s  Highway.car[7]  cellular 10.0.2.190
+*I  #517992  35.6s  Highway.car[7]  cellular 10.0.2.190
+*I  #517992  35.6s  Highway.car[7]  cellular 10.0.2.190
+*I  #517992  35.6s  Highway.car[7]  cellular 10.0.2.190
+*I  #517992  35.6s  Highway.car[7]  cellular 10.0.2.190
+*I  #517992  35.6s  Highway.car[7]  lo0 127.0.0.1
+*I  #517992  35.6s  Highway.car[7]  lo0 127.0.0.1
+*I  #517992  35.6s  Highway.car[7]  lo0 127.0.0.1
++R #517992  35.6s  Highway.car[7]  10.0.2.190  <unspec>/0  <unspec>  cellular
+*I  #517992  35.6s  Highway.car[7]  cellular 10.0.2.190
++R #517992  35.6s  Highway.car[7]  10.0.2.190  127.0.0.0/8  <unspec>  lo0
++R #517992  35.6s  Highway.car[7]  10.0.2.190  10.0.0.0/8  <unspec>  cellular

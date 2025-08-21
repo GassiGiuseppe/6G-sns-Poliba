@@ -1,0 +1,17 @@
++R #0  0s  Highway.server  192.168.0.1  127.0.0.0/8  <unspec>  lo0
++R #0  0s  Highway.server  192.168.0.1  192.168.0.0/24  <unspec>  ppp0
++R #0  0s  Highway.router  192.168.1.1  127.0.0.0/8  <unspec>  lo0
++R #0  0s  Highway.router  192.168.1.1  192.168.0.0/24  <unspec>  ppp0
++R #0  0s  Highway.router  192.168.1.1  192.168.1.0/24  <unspec>  ppp1
++R #0  0s  Highway.upf  192.168.3.1  127.0.0.0/8  <unspec>  lo0
++R #0  0s  Highway.upf  192.168.3.1  192.168.2.0/24  <unspec>  ppp0
++R #0  0s  Highway.upf  192.168.3.1  192.168.3.0/24  <unspec>  ppp1
++R #0  0s  Highway.upf  192.168.3.1  192.168.1.0/24  <unspec>  pppIf
++R #0  0s  Highway.gNodeB1  192.168.5.1  10.0.0.0/8  <unspec>  cellular
++R #0  0s  Highway.gNodeB1  192.168.5.1  192.168.2.0/24  <unspec>  pppIf
++R #0  0s  Highway.gNodeB1  192.168.5.1  192.168.4.0/24  <unspec>  x2ppp0
++R #0  0s  Highway.gNodeB1  192.168.5.1  192.168.5.0/24  <unspec>  pppMEHostIf
++R #0  0s  Highway.gNodeB2  192.168.6.1  10.0.0.0/8  <unspec>  cellular
++R #0  0s  Highway.gNodeB2  192.168.6.1  192.168.3.0/24  <unspec>  pppIf
++R #0  0s  Highway.gNodeB2  192.168.6.1  192.168.4.0/24  <unspec>  x2ppp0
++R #0  0s  Highway.gNodeB2  192.168.6.1  192.168.6.0/24  <unspec>  pppMEHostIf
