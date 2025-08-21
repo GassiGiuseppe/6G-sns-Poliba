@@ -38,13 +38,13 @@ BASHRC_PATH="$WORKSPACE/.bashrc"
 sudo -u "$USER" bash -c "echo 'export GDK_BACKEND=x11' >> \"$BASHRC_PATH\""
 
 # Run setup scripts
-sh "$SCRIPT_DIR/install-omnet.sh"
-sh "$SCRIPT_DIR/install-sumo.sh"
-sh "$SCRIPT_DIR/vscode.sh"
-sh "$SCRIPT_DIR/sudo_miniconda_setup.sh"
+# bash "$SCRIPT_DIR/install-omnet.sh" # opp_env install its own omnet#
+#bash "$SCRIPT_DIR/install-sumo.sh"
+bash "$SCRIPT_DIR/vscode.sh"
+bash "$SCRIPT_DIR/sudo_miniconda_setup.sh"
 
 # Create /nix directory with correct permissions
-mkdir -m 0755 /nix
+mkdir -p -m 0755 /nix
 chown "$USER" /nix
 
 # Run the opp_env setup as the target user

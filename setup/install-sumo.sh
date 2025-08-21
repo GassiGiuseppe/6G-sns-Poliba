@@ -1,7 +1,7 @@
 #!/bin/bash
 # Install SUMO 1.6.0 from source and set up environment variables
 
-set -euo pipefail
+# set -euo pipefail # already setted
 
 # Define user and workspace
 USER="${SUDO_USER:-$USER}"
@@ -24,6 +24,10 @@ mkdir -p build/cmake-build
 cd build/cmake-build
 cmake ../..
 make -j"$(nproc)"
+
+# Give permission to normal user
+chown -R "$USER:$USER" "$WORKSPACE/sumo-${SUMO_VERSION}"
+chmod -R 775 "$WORKSPACE/sumo-${SUMO_VERSION}"
 
 # Add SUMO to PATH and set SUMO_HOME in .bashrc
 {

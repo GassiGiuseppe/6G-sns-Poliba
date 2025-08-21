@@ -12,22 +12,43 @@ cd "$SIM_ENV_DIR"
 
 # Inizializza opp_env
 echo "Creazione ambiente opp_env in: $SIM_ENV_DIR"
-if opp_env info &>/dev/null; then
+# check 
+if opp_env info &>/dev/null && [ -d ".metadata" ];then
+  # if there is opp_env and the directory of metadata
   echo "Workspace opp_env già esistente in $SIM_ENV_DIR, salto init"
+  opp_env init
 else
   echo "Inizializzo nuovo workspace opp_env"
   opp_env init
 fi
 
+# required: omnet 6.0 , inet 4.4, veins-veins 5.2 , veins-inet, simu5g
 # Installa i framework richiesti
-echo "Installazione INET..."
-opp_env install inet-latest
+# echo "Installing omnetpp 6.0 ..."
+# opp_env install omnetpp-6.0.3
 
-echo "Installazione Simu5G..."
-opp_env install simu5g-latest
+# echo "Installazione INET..."
+# opp_env install inet-4.4.0  #idk it seems that veins 5.2 prefer inet 4.2.8
 
-echo "Installazione Veins (incluso Veins_INET)..."
-opp_env install veins-latest
+# echo "Installazione Veins (incluso Veins_INET)..."
+# opp_env install veins-5.3
+
+#e cho "Installazione Simu5G..."
+# opp_env install simu5g-1.2.2
+
+# echo "Installazione Veins (incluso Veins_INET)..."
+# opp_env install veins-5.3
+
+###################################
+# the following mess is because simu5g and veins both want to use different version of omnet and veins
+
+# Install Simu5G and Veins 5.3 (auto-selects OMNeT++ 6.0.3)
+echo ">>> Installing Simu5G and Veins 5.3"
+opp_env install simu5g-1.2.2 veins-5.3
+
+
+
+#####################################
 
 # Crea script di attivazione
 echo "Creazione script activate.sh"
@@ -57,4 +78,4 @@ fi
 
 echo "Ambiente creato in '$SIM_ENV_DIR'"
 echo "Framework installati: INET, Simu5G, Veins (con Veins_INET)"
-echo "Ora puoi lanciare omnetpp digitando: omnetpp"
+#echo "Ora puoi lanciare omnetpp digitando: omnetpp"

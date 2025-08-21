@@ -8,7 +8,8 @@ if [ "$(id -u)" -eq 0 ]; then
 fi
 
 # Define conda environment and path
-ENV_NAME="py310"
+#ENV_NAME="py310"
+ENV_NAME="base" # the correct one to use is py310 but there are currently some issues
 MINICONDA_PATH="$HOME/miniconda"
 
 # Ensure conda is available
