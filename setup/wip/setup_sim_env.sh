@@ -44,7 +44,8 @@ fi
 
 # Install Simu5G and Veins 5.3 (auto-selects OMNeT++ 6.0.3)
 echo ">>> Installing Simu5G and Veins 5.3"
-opp_env install simu5g-1.1.0 veins-5.1
+opp_env install simu5g-1.2.1 veins-5.3
+# opp_env install simu5g-1.1.0 veins-5.1
 # opp_env install simu5g-1.2.2 veins-5.3  # <--- this seemed good but simu5g-1.2.2 needs veins-inet 
 #                                         # which the new version of inet don't have anymore
 # opp_env install veins-latest

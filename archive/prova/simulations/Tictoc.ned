@@ -13,9 +13,9 @@
 // along with this program.  If not, see http://www.gnu.org/licenses/.
 // 
 
-package prova.simulations;
+package simulations;
 
-import prova.Txc;
+import src.Txc;
 
 //
 // Two instances (tic and toc) of Txc connected.

@@ -1,4 +1,5 @@
 #!/bin/bash
+# run this file as sudo
 set -euo pipefail
 
 # Set non-interactive frontend for apt to avoid prompts
@@ -39,7 +40,7 @@ sudo -u "$USER" bash -c "echo 'export GDK_BACKEND=x11' >> \"$BASHRC_PATH\""
 
 # Run setup scripts
 # bash "$SCRIPT_DIR/install-omnet.sh" # opp_env install its own omnet#
-#bash "$SCRIPT_DIR/install-sumo.sh"
+bash "$SCRIPT_DIR/install-sumo.sh"
 bash "$SCRIPT_DIR/vscode.sh"
 bash "$SCRIPT_DIR/sudo_miniconda_setup.sh"
 

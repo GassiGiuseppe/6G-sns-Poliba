@@ -13,7 +13,7 @@
 // along with this program.  If not, see http://www.gnu.org/licenses/.
 // 
 
-package prova;
+package src;
 
 //
 // Immediately sends out any message it receives. It can optionally generate

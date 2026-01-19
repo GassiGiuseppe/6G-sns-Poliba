@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>prova</name>
+	<comment></comment>
+	<projects>
+		<project>inet-4.4.2</project>
+		<project>simu5g-1.2.1</project>
+		<project>veins_inet</project>
+		<project>veins-5.3</project>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>org.omnetpp.cdt.MakefileBuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+		<buildCommand>
+			<name>org.omnetpp.scave.builder.vectorfileindexer</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>org.omnetpp.main.omnetppnature</nature>
+	</natures>
+</projectDescription>

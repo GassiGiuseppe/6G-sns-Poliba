@@ -1,5 +1,5 @@
 // designate the NED package of this folder
-package prova;
+package src;
 
 // namespace of module C++ classes
 @namespace(prova);

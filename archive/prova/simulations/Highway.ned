@@ -8,7 +8,7 @@
 // The above files and the present reference are part of the software itself, 
 // and cannot be removed from it.
 //
-package prova.simulations;
+package simulations;
 
 import inet.networklayer.configurator.ipv4.Ipv4NetworkConfigurator;
 import inet.networklayer.ipv4.RoutingTableRecorder;

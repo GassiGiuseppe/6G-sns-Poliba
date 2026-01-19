@@ -1,4 +1,4 @@
 // designate the NED package of this folder
-package prova.simulations;
+package simulations;
 
 @license(LGPL);
